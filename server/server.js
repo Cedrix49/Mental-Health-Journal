@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import connectDB from "./config/mongodb.js";
 import authRouter from "./routes/authRoutes.js";
 import userRouter from "./routes/userRoutes.js";
+import journalRouter from "./routes/journalRoutes.js"
 
 
 const app = express();
@@ -19,7 +20,7 @@ app.use(express.json());
 //Parse cookies
 app.use(cookieParser());
 
-const allowedOrigins = ['https://completauth.vercel.app', 'http://localhost:5173']
+const allowedOrigins = ['http://localhost:5175'];
 //CORS
 app.use(cors({
     origin: allowedOrigins, credentials: true,
@@ -35,6 +36,9 @@ app.use('/api/auth', authRouter);
 
 //User routes
 app.use('/api/user', userRouter);
+
+app.use('/api/journal', journalRouter);
+
 
 //Listen to port
 app.listen(PORT, () => {

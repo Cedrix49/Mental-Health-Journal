@@ -76,24 +76,22 @@ const Login = () => {
     }
   return (
     <div className="flex items-center justify-center min-h-screen px-6 
-                    sm:px-0 bg-gradient-to-br from-blue-200 to-purple-400">
-        <img src={assets.logo} 
-             alt="logo"
-             className="absolute left-5 sm:left-20 top-5 w-28 sm:w-32 cursor-pointer"
-             onClick={() => navigate('/')}
-        />
+                    sm:px-0 bg-white">
+        <div className="absolute top-5 left-5 sm:left-20 text-3xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>
+            Mental Health Journey
+        </div>
 
         {/* Container of the form */}
-        <div className="bg-slate-900 p-10 rounded-lg shadow-lg w-full sm:w-96 text-indigo-300 text-sm">
-            <h2 className="text-3xl font-semibold text-white text-center mb-3">{state === 'Sign Up' ? 'Create Account' : 'Login'}</h2>
-            <p className="text-center text-sm mb-6">{state === 'Sign Up' ? 'Create your account!' : 'Login to your account!'}</p>
+        <div className="bg-black/20 backdrop-blur-md p-10 rounded-lg shadow-lg w-full sm:w-96 text-gray-800 text-sm">
+            <h2 className="text-3xl font-semibold text-gray-800 text-center mb-3">{state === 'Sign Up' ? 'Create Account' : 'Login'}</h2>
+            <p className="text-center text-gray-600 text-sm mb-6">{state === 'Sign Up' ? 'Create your account!' : 'Login to your account!'}</p>
 
             {/* Form */}
             <form onSubmit={onSubmitHandler}>
 
                 {state === 'Sign Up' && (
                 <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full
-                                    bg-[#333a5c]">
+                                    bg-gray-100">
                     <img src={assets.person_icon}
                          alt="person_icon"
                     />
@@ -110,7 +108,7 @@ const Login = () => {
                 )}
 
                 <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full
-                bg-[#333a5c]">
+                bg-gray-100">
                     <img src={assets.mail_icon}
                          alt="mail_icon"
                     />
@@ -125,7 +123,7 @@ const Login = () => {
                         required />
                 </div>
                 <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full
-                bg-[#333a5c]">
+                bg-gray-100">
                     <img src={assets.lock_icon}
                          alt="lock_icon"
                     />
@@ -148,8 +146,7 @@ const Login = () => {
                     Forgot password?
                 </p>
 
-                <button className='cursor-pointer w-full py-2.5 rounded-full bg-gradient-to-r 
-                from-indigo-500 to-indigo-900 text-white font-medium hover:bg-gradient-to-r hover:from-indigo-600 hover:to-indigo-900'>
+                <button className='cursor-pointer w-full py-2.5 rounded-full bg-gray-800 text-white font-medium'>
                     {state}
                 </button>
             </form>

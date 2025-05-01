@@ -1,0 +1,9 @@
+# Ignore environment variables
+.env
+
+# Optional: ignore node modules
+node_modules/
+
+# Optional: ignore logs
+*.log
+.qodo

@@ -84,29 +84,26 @@ const ResetPassword = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen
-                    bg-gradient-to-br from-blue-200 to-purple-400">
-        <img src={assets.logo} 
-             alt="logo"
-             className="absolute left-5 sm:left-20 top-5 w-28 sm:w-32 cursor-pointer"
-             onClick={() => navigate('/')}
-        />
+                    bg-white">
+        <div className="absolute top-5 left-5 sm:left-20 text-3xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>
+            Mental Health Journey
+        </div>
 
         {/* Enter email */}
         {!isEmailSent && (
-        <form onSubmit={onSubmitEmail} className="bg-slate-900 p-8 rounded-lg shadow-lg w-96 text-sm">
-        <h1 className="text-white text-2xl font-semibold text-center mb-4">Reset Password</h1>
-        <p className="text-indigo-300 text-center mb-6">
+        <form onSubmit={onSubmitEmail} className="bg-black/20 p-8 rounded-lg shadow-lg w-96 text-sm">
+        <h1 className="text-gray-800 text-2xl font-semibold text-center mb-4">Reset Password</h1>
+        <p className="text-indigo-600 text-center mb-6">
           Please enter registered email address to reset your password.
         </p>
-        <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full bg-[#333a5c]">
+        <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full bg-gray-100">
           <img src={assets.mail_icon} alt="mail" className="w-3 h-3"/>
-          <input type="email" placeholder="Email" className="bg-transparent outline-none text-white"
+          <input type="email" placeholder="Email" className="bg-transparent outline-none text-gray"
             value={email}
             onChange={(e) => setEmail(e.target.value)} required
           />
         </div>
-        <button className="w-full py-2.5 rounded-full bg-gradient-to-r  from-indigo-500
-        to-indigo-900 rounded-full mt-3 text-white">
+        <button className="cursor-pointer w-full py-2.5 bg-gray-800 rounded-full mt-3 text-white">
           Submit
         </button>
         </form>
@@ -150,7 +147,7 @@ const ResetPassword = () => {
             />
           </div>
           <button className="cursor-pointer w-full py-2.5 rounded-full bg-gradient-to-r  from-indigo-500
-          to-indigo-900 rounded-full mt-3 text-white">
+          to-indigo-900 mt-3 text-white">
             Submit
           </button>
         </form>

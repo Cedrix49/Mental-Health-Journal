@@ -22,6 +22,7 @@ const userAuth = async (req, res, next) => {
         //If token is valid, set user in request
         if(tokenDecode.id){
             req.user = { id: tokenDecode.id };
+            req.userId = tokenDecode.id;    // ← add this line
             next();
         //If token is invalid, return error
         } else {
