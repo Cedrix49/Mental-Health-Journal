@@ -20,7 +20,7 @@ app.use(express.json());
 //Parse cookies
 app.use(cookieParser());
 
-const allowedOrigins = ['http://localhost:5175'];
+const allowedOrigins = ['http://localhost:5175', 'https://mental-health-journal-five.vercel.app'];
 //CORS
 app.use(cors({
     origin: allowedOrigins, credentials: true,
