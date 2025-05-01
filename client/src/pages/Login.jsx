@@ -78,7 +78,7 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen px-6 
                     sm:px-0 bg-white">
         <div className="absolute top-5 left-5 sm:left-20 text-3xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>
-            Mental Health Journey
+            Mental Health Journal
         </div>
 
         {/* Container of the form */}

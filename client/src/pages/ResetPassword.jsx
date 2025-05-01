@@ -86,7 +86,7 @@ const ResetPassword = () => {
     <div className="flex items-center justify-center min-h-screen
                     bg-white">
         <div className="absolute top-5 left-5 sm:left-20 text-3xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>
-            Mental Health Journey
+            Mental Health Journal
         </div>
 
         {/* Enter email */}

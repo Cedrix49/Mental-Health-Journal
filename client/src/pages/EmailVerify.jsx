@@ -68,7 +68,7 @@ const EmailVerify = () => {
     <div className="flex items-center justify-center min-h-screen
                     bg-white">
         <div className="absolute top-5 left-5 sm:left-20 text-3xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>
-          Mental Health Journey
+          Mental Health Journal
         </div>
 
         <form onSubmit={onSubmitHandler} className="bg-black/20 p-8 rounded-lg shadow-lg w-96 text-sm">
